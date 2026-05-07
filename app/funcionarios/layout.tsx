@@ -17,21 +17,20 @@ export default function FuncionariosLayout({ children }: { children: React.React
       if (usuario && !temPermissao("ADMINISTRADOR")) {
         setDenied(true);
         const timer = setInterval(() => {
-          setCountdown((prev) => {
-            if (prev <= 1) {
-              clearInterval(timer);
-              router.replace("/dashboard");
-              return 0;
-            }
-            return prev - 1;
-          });
+          setCountdown((prev) => prev > 0 ? prev - 1 : 0);
         }, 1000);
         return () => clearInterval(timer);
       } else {
         setIsChecking(false);
       }
     }
-  }, [loading, usuario, temPermissao, router]);
+  }, [loading, usuario, temPermissao]);
+
+  useEffect(() => {
+    if (denied && countdown === 0) {
+      router.replace("/dashboard");
+    }
+  }, [denied, countdown, router]);
 
   if (loading || isChecking) {
     if (denied) {

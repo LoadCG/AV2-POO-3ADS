@@ -1,11 +1,12 @@
 export function isValidString(text: string): boolean {
   if (!text) return false;
-  
-  const limpo = text.trim();
-  if (limpo.length === 0) return false;
+  if (text.length === 0) return false;
+
+  // Não pode começar nem terminar com espaços
+  if (text !== text.trim()) return false;
 
   // Must contain at least one letter or number
-  const temAlfanumerico = /[\p{L}\p{N}]/u.test(limpo);
+  const temAlfanumerico = /[\p{L}\p{N}]/u.test(text);
   if (!temAlfanumerico) return false;
 
   // No control characters
