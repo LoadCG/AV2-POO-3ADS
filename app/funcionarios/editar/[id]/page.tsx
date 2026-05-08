@@ -98,11 +98,11 @@ export default function EditarFuncionarioPage() {
     // Prepare Endereco JSON
     const hasAddress = endereco.cep || endereco.logradouro || endereco.numero || endereco.bairro || endereco.cidade || endereco.uf;
     if (hasAddress) {
-      if (!isValidString(endereco.logradouro)) return toast.error("Logradouro inválido.");
-      if (!isValidString(endereco.numero)) return toast.error("Número inválido.");
-      if (!isValidString(endereco.bairro)) return toast.error("Bairro inválido.");
-      if (!isValidString(endereco.cidade)) return toast.error("Cidade inválida.");
-      if (!endereco.uf) return toast.error("UF obrigatória.");
+      if (!isValidString(endereco.logradouro)) return toast.error("Logradouro é obrigatório e não pode ser vazio.");
+      if (!isValidString(endereco.numero)) return toast.error("Número do endereço é obrigatório (use 'S/N' se não houver).");
+      if (!isValidString(endereco.bairro)) return toast.error("Bairro é obrigatório e não pode ser vazio.");
+      if (!isValidString(endereco.cidade)) return toast.error("Cidade é obrigatória e não pode ser vazia.");
+      if (!endereco.uf) return toast.error("UF é obrigatória.");
     }
 
     const enderecoString = hasAddress ? JSON.stringify(endereco) : "";
@@ -196,7 +196,7 @@ export default function EditarFuncionarioPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 mb-5">
-                <Field label="Número">
+                <Field label="Número *">
                   <input value={endereco.numero} onChange={e => setEndereco({ ...endereco, numero: e.target.value })} className="input-field" />
                 </Field>
                 <div className="sm:col-span-3">
