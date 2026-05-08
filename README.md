@@ -1,6 +1,6 @@
 # 🛩️ SkyForge Web — Sistema de Gestão de Produção de Aeronaves
 
-Sistema web Full Stack / Frontend desenvolvido como a **Avaliação 2 (AV2)** da disciplina de POO. Esta versão traz toda a lógica de negócio do CLI da AV1 para uma interface rica, responsiva e segura utilizando Next.js, React e Tailwind CSS.
+Sistema web Full Stack / Frontend desenvolvido como a **Avaliação 2 (AV2)** da disciplina de POO. Esta versão traz toda a lógica de negócio do CLI da AV1 para uma interface web responsiva utilizando Next.js, React e Tailwind CSS.
 
 ## 🎓 Informações Acadêmicas
 
@@ -8,12 +8,12 @@ Sistema web Full Stack / Frontend desenvolvido como a **Avaliação 2 (AV2)** da
 **Professor:** Gerson da Penha Neto  
 **Disciplina:** Programação Orientada a Objetos (POO)  
 **Aluno:** Cauan Gabriel da Silva Resende Nascimento  
-**Turma:** 3º ADS (2026/1)
+**Turma:** 3º ADS (2025/1)
 
 ## 🎨 Prototipação
 
 O design do projeto foi planejado e estruturado no Figma antes do desenvolvimento.  
-🔗 **[Link para o protótipo no Figma](#insira-o-link-aqui)** *(Insira o link do seu Figma aqui)*
+🔗 **[Link para o protótipo no Figma](https://www.figma.com/design/Ff03uv28PHWfeHZ7MIECJO/SKYFORGE---AV2---WIREFRAMES---PROT%C3%93TIPOS---Cauan-Gabriel---3ADS-2025-1?node-id=0-1&t=KTkHvcfBVikMcBAf-1)**
 
 ## 🚀 Como rodar o projeto facilmente (em qualquer máquina)
 
